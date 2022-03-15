@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{details.name}} | Student Portal</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #efefef;
+        }
+        .container-fluid{
+            width: 100%;
+            color: white;
+            background-color: #0275d8;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h1{
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .content{
+            max-width: 800px;
+        }
+        table{
+            border: 1px solid black;
+            border-spacing: 0;
+        }
+        tr,th,td{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="header">
+            <div>
+                <h1>{{details.name}}</h1>
+                <h2>Attendance: {{attendance}}%</h2>
+            </div>
+            <a href="logout"><h2>logout</h2></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Total Score</h1>
+        <p>View your Grades Here</p>
+        <br><br>
+        
+        <div class="content">
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Mid Marks</th>
+                    <th>Final Marks</th>
+                    <th>Total</th>
+                </tr>
+                
+                <tr>
+                    <td>Telugu</td>
+                    <td>{{details.telugu_mid_marks}}</td>
+                    <td>{{details.telugu_final_marks}}</td>
+                    <td>{{telugu_total}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Hindi</td>
+                    <td>{{details.hindi_mid_marks}}</td>
+                    <td>{{details.hindi_final_marks}}</td>
+                    <td>{{hindi_total}}</td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>{{details.hindi_mid_marks}}</td>
+                    <td>{{details.hindi_final_marks}}</td>
+                    <td>{{english_total}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Maths</td>
+                    <td>{{details.maths_mid_marks}}</td>
+                    <td>{{details.maths_final_marks}}</td>
+                    <td>{{maths_total}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Science</td>
+                    <td>{{details.science_mid_marks}}</td>
+                    <td>{{details.science_final_marks}}</td>
+                    <td>{{science_total}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Social</td>
+                    <td>{{details.social_mid_marks}}</td>
+                    <td>{{details.social_final_marks}}</td>
+                    <td>{{social_total}}</td>
+                </tr>
+
+                <tr>
+                    <th>Total</th>
+                    <th></th>
+                    <th></th>
+                    <th>{{total}}/600</th>
+                </tr>
+
+                <tr>
+                    <th>Percentage</th>
+                    <th></th>
+                    <th></th>
+                    <th>{{percentage}}%</th>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+</body>
+</html>
